@@ -16,7 +16,15 @@ what do you want? how many do you want?
 //Dependencies
 var inquirer = require('inquirer');
 var mysql = require('mysql');
-var table = require('cli-table');
+// var table = require('cli-table');
+
+var connection = mysql.createConnection({
+    host: "localhost",
+    port: 3306,
+    user: "root",
+    password: "",
+    database: "bamazon"
+})
 
 function start() {
     //prints the items for sale and their details
